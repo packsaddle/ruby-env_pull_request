@@ -1,5 +1,8 @@
+require 'env_pull_request/base'
 require 'env_pull_request/version'
 
 module EnvPullRequest
-  # Your code goes here...
+  def self.new
+    Base.new
+  end
 end

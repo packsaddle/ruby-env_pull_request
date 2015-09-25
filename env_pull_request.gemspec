@@ -10,11 +10,11 @@ Gem::Specification.new do |spec|
   spec.email         = ['o.gata.ken@gmail.com']
 
   spec.summary       =
-    'TODO: Write a short summary, because Rubygems requires one.'
+    'Get PULL_REQUEST_ID from environment variables.'
   spec.description   =
-    'TODO: Write a longer description or delete this line.'
+    'Get PULL_REQUEST_ID from environment variables.'
   spec.homepage      =
-    "TODO: Put your gem's website or public repo URL here."
+    'https://github.com/packsaddle/ruby-env_pull_request'
   spec.license       = 'MIT'
 
   spec.files         =
@@ -30,4 +30,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'
+  spec.add_development_dependency 'test-unit'
 end
