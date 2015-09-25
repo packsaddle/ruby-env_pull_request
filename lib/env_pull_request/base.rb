@@ -9,8 +9,6 @@ module EnvPullRequest
     def fetch_pull_request_id
       if ENV['TRAVIS_PULL_REQUEST'] && ENV['TRAVIS_PULL_REQUEST'].downcase != 'false'
         ENV['TRAVIS_PULL_REQUEST'].to_i
-      else
-        nil
       end
     end
 
