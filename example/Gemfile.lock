@@ -1,0 +1,17 @@
+PATH
+  remote: ../
+  specs:
+    env_pull_request (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  env_pull_request!
+
+BUNDLED WITH
+   1.10.6
