@@ -6,4 +6,5 @@ gemspec
 group :development do
   gem 'rubocop', group: :test
   gem 'byebug', group: :test
+  gem 'parse_gemspec-cli'
 end
