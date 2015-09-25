@@ -7,8 +7,23 @@
 
 ## Usage
 
+```ruby
+require 'env_pull_request'
+
+env_pull = EnvPullRequest.new
+env_pull.pull_request? #=> true
+env_pull.pull_request_id #=> 800
+```
+
 
 ## API
+
+
+## Supported services / applications
+
+* Travis-ci
+    * `ENV['TRAVIS_PULL_REQUEST']`
+    * [Environment Variables - Travis CI](http://docs.travis-ci.com/user/environment-variables/#Convenience-Variables)
 
 
 ## Changelog
