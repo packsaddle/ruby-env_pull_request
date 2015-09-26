@@ -25,6 +25,10 @@ env_pull.pull_request_id #=> 800
     * `ENV['TRAVIS_PULL_REQUEST']`
     * [Environment Variables - Travis CI](http://docs.travis-ci.com/user/environment-variables/#Convenience-Variables)
 
+* CircleCI
+    * `ENV['CIRCLE_PR_NUMBER']`
+    * [Environment variables - CircleCI](https://circleci.com/docs/environment-variables#building-pull-requests-that-come-from-forks)
+
 
 ## Changelog
 
