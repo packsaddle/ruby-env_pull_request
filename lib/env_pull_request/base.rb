@@ -1,5 +1,8 @@
+require 'env_pull_request/utils'
+
 module EnvPullRequest
   class Base
+    include Utils
     attr_reader :pull_request_id
 
     def initialize
@@ -7,12 +10,11 @@ module EnvPullRequest
     end
 
     def fetch_pull_request_id
-      if ENV['TRAVIS_PULL_REQUEST'] &&
-         ENV['TRAVIS_PULL_REQUEST'].downcase != 'false'
+      if integral_string? ENV['TRAVIS_PULL_REQUEST']
         ENV['TRAVIS_PULL_REQUEST'].to_i
-      elsif ENV['CIRCLE_PR_NUMBER']
+      elsif integral_string? ENV['CIRCLE_PR_NUMBER']
         ENV['CIRCLE_PR_NUMBER'].to_i
-      elsif ENV['ghprbPullId']
+      elsif integral_string? ENV['ghprbPullId']
         ENV['ghprbPullId'].to_i
       end
     end
