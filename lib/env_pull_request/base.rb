@@ -10,11 +10,11 @@ module EnvPullRequest
     end
 
     def fetch_pull_request_id
-      if numeric_string? ENV['TRAVIS_PULL_REQUEST']
+      if integral_string? ENV['TRAVIS_PULL_REQUEST']
         ENV['TRAVIS_PULL_REQUEST'].to_i
-      elsif numeric_string? ENV['CIRCLE_PR_NUMBER']
+      elsif integral_string? ENV['CIRCLE_PR_NUMBER']
         ENV['CIRCLE_PR_NUMBER'].to_i
-      elsif numeric_string? ENV['ghprbPullId']
+      elsif integral_string? ENV['ghprbPullId']
         ENV['ghprbPullId'].to_i
       end
     end
