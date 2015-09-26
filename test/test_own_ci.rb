@@ -29,7 +29,7 @@ module EnvPullRequest
         test '#pull_request?' do
           assert do
             EnvPullRequest.new do
-              if Utils.integral_string? ENV['PULL_REQUEST_ID']
+              if NaturalNumberString.natural_number? ENV['PULL_REQUEST_ID']
                 ENV['PULL_REQUEST_ID'].to_i
               end
             end.pull_request? == false
@@ -38,7 +38,7 @@ module EnvPullRequest
         test '#pull_request_id' do
           assert do
             EnvPullRequest.new do
-              if Utils.integral_string? ENV['PULL_REQUEST_ID']
+              if NaturalNumberString.natural_number? ENV['PULL_REQUEST_ID']
                 ENV['PULL_REQUEST_ID'].to_i
               end
             end.pull_request_id.nil?
@@ -61,7 +61,7 @@ module EnvPullRequest
         test '#pull_request?' do
           assert do
             EnvPullRequest.new do
-              if Utils.integral_string? ENV['PULL_REQUEST_ID']
+              if NaturalNumberString.natural_number? ENV['PULL_REQUEST_ID']
                 ENV['PULL_REQUEST_ID'].to_i
               end
             end.pull_request? == true
@@ -70,7 +70,7 @@ module EnvPullRequest
         test '#pull_request_id' do
           assert do
             EnvPullRequest.new do
-              if Utils.integral_string? ENV['PULL_REQUEST_ID']
+              if NaturalNumberString.natural_number? ENV['PULL_REQUEST_ID']
                 ENV['PULL_REQUEST_ID'].to_i
               end
             end.pull_request_id == pull_id
@@ -89,7 +89,7 @@ module EnvPullRequest
           test '#pull_request?' do
             assert do
               EnvPullRequest.new do
-                if Utils.integral_string? ENV['PULL_REQUEST_ID']
+                if NaturalNumberString.natural_number? ENV['PULL_REQUEST_ID']
                   ENV['PULL_REQUEST_ID'].to_i
                 end
               end.pull_request? == true
@@ -98,7 +98,7 @@ module EnvPullRequest
           test '#pull_request_id' do
             assert do
               EnvPullRequest.new do
-                if Utils.integral_string? ENV['PULL_REQUEST_ID']
+                if NaturalNumberString.natural_number? ENV['PULL_REQUEST_ID']
                   ENV['PULL_REQUEST_ID'].to_i
                 end
               end.pull_request_id == pull_id
@@ -123,7 +123,7 @@ module EnvPullRequest
           test '#pull_request?' do
             assert do
               EnvPullRequest.new do
-                if Utils.integral_string? ENV['PULL_REQUEST_ID']
+                if NaturalNumberString.natural_number? ENV['PULL_REQUEST_ID']
                   ENV['PULL_REQUEST_ID'].to_i
                 end
               end.pull_request? == true
@@ -132,7 +132,7 @@ module EnvPullRequest
           test '#pull_request_id' do
             assert do
               EnvPullRequest.new do
-                if Utils.integral_string? ENV['PULL_REQUEST_ID']
+                if NaturalNumberString.natural_number? ENV['PULL_REQUEST_ID']
                   ENV['PULL_REQUEST_ID'].to_i
                 end
               end.pull_request_id == pull_id
