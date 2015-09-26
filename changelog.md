@@ -1,3 +1,13 @@
+<a name="0.3.1"></a>
+## [0.3.1](https://github.com/packsaddle/ruby-env_pull_request/compare/v0.3.0...v0.3.1) (2015-09-26)
+
+
+### Features
+
+* **natural_number_string:** update api ([8bb55b8](https://github.com/packsaddle/ruby-env_pull_request/commit/8bb55b8))
+
+
+
 <a name="0.3.0"></a>
 # [0.3.0](https://github.com/packsaddle/ruby-env_pull_request/compare/v0.2.2...v0.3.0) (2015-09-26)
 
