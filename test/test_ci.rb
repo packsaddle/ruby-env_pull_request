@@ -26,6 +26,22 @@ module EnvPullRequest
           end
         end
       end
+      sub_test_case 'with block' do
+        test '#pull_request?' do
+          assert do
+            EnvPullRequest.new do
+              ENV['PULL_REQUEST_ID'].to_i if ENV['PULL_REQUEST_ID']
+            end.pull_request? == false
+          end
+        end
+        test '#pull_request_id' do
+          assert do
+            EnvPullRequest.new do
+              ENV['PULL_REQUEST_ID'].to_i if ENV['PULL_REQUEST_ID']
+            end.pull_request_id.nil?
+          end
+        end
+      end
     end
 
     sub_test_case 'travis-ci' do
