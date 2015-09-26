@@ -30,7 +30,7 @@ module EnvPullRequest
           assert do
             EnvPullRequest.new do
               if NaturalNumberString
-                 .natural_number_string? ENV['PULL_REQUEST_ID']
+                 .positive_integer_string? ENV['PULL_REQUEST_ID']
                 ENV['PULL_REQUEST_ID'].to_i
               end
             end.pull_request? == false
@@ -40,7 +40,7 @@ module EnvPullRequest
           assert do
             EnvPullRequest.new do
               if NaturalNumberString
-                 .natural_number_string? ENV['PULL_REQUEST_ID']
+                 .positive_integer_string? ENV['PULL_REQUEST_ID']
                 ENV['PULL_REQUEST_ID'].to_i
               end
             end.pull_request_id.nil?
@@ -64,7 +64,7 @@ module EnvPullRequest
           assert do
             EnvPullRequest.new do
               if NaturalNumberString
-                 .natural_number_string? ENV['PULL_REQUEST_ID']
+                 .positive_integer_string? ENV['PULL_REQUEST_ID']
                 ENV['PULL_REQUEST_ID'].to_i
               end
             end.pull_request? == true
@@ -74,7 +74,7 @@ module EnvPullRequest
           assert do
             EnvPullRequest.new do
               if NaturalNumberString
-                 .natural_number_string? ENV['PULL_REQUEST_ID']
+                 .positive_integer_string? ENV['PULL_REQUEST_ID']
                 ENV['PULL_REQUEST_ID'].to_i
               end
             end.pull_request_id == pull_id
@@ -94,7 +94,7 @@ module EnvPullRequest
             assert do
               EnvPullRequest.new do
                 if NaturalNumberString
-                   .natural_number_string? ENV['PULL_REQUEST_ID']
+                   .positive_integer_string? ENV['PULL_REQUEST_ID']
                   ENV['PULL_REQUEST_ID'].to_i
                 end
               end.pull_request? == true
@@ -104,7 +104,7 @@ module EnvPullRequest
             assert do
               EnvPullRequest.new do
                 if NaturalNumberString
-                   .natural_number_string? ENV['PULL_REQUEST_ID']
+                   .positive_integer_string? ENV['PULL_REQUEST_ID']
                   ENV['PULL_REQUEST_ID'].to_i
                 end
               end.pull_request_id == pull_id
@@ -130,7 +130,7 @@ module EnvPullRequest
             assert do
               EnvPullRequest.new do
                 if NaturalNumberString
-                   .natural_number_string? ENV['PULL_REQUEST_ID']
+                   .positive_integer_string? ENV['PULL_REQUEST_ID']
                   ENV['PULL_REQUEST_ID'].to_i
                 end
               end.pull_request? == true
@@ -140,7 +140,7 @@ module EnvPullRequest
             assert do
               EnvPullRequest.new do
                 if NaturalNumberString
-                   .natural_number_string? ENV['PULL_REQUEST_ID']
+                   .positive_integer_string? ENV['PULL_REQUEST_ID']
                   ENV['PULL_REQUEST_ID'].to_i
                 end
               end.pull_request_id == pull_id
