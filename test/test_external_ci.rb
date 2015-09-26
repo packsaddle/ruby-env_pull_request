@@ -1,7 +1,7 @@
 require_relative 'helper'
 
 module EnvPullRequest
-  class TestCi < Test::Unit::TestCase
+  class TestExternalCi < Test::Unit::TestCase
     extend TestHelper
 
     def self.startup
@@ -10,19 +10,6 @@ module EnvPullRequest
 
     def self.shutdown
       restore_env_pull_request
-    end
-
-    sub_test_case 'not pull request' do
-      test '#pull_request?' do
-        assert do
-          EnvPullRequest.new.pull_request? == false
-        end
-      end
-      test '#pull_request_id' do
-        assert do
-          EnvPullRequest.new.pull_request_id.nil?
-        end
-      end
     end
 
     sub_test_case 'travis-ci' do
