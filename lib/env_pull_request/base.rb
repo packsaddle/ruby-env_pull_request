@@ -5,8 +5,13 @@ module EnvPullRequest
     include Utils
     attr_reader :pull_request_id
 
-    def initialize
-      @pull_request_id = fetch_pull_request_id
+    def initialize(&block)
+      @pull_request_id =
+        if block_given?
+          block.call || fetch_pull_request_id
+        else
+          fetch_pull_request_id
+        end
     end
 
     def fetch_pull_request_id
