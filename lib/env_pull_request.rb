@@ -1,3 +1,5 @@
+require 'natural_number_string'
+
 require 'env_pull_request/base'
 require 'env_pull_request/version'
 
