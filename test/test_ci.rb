@@ -103,6 +103,26 @@ module EnvPullRequest
             end
           end
         end
+        sub_test_case 'with block' do
+          test '#pull_request?' do
+            assert do
+              EnvPullRequest.new do
+                if Utils.integral_string? ENV['PULL_REQUEST_ID']
+                  ENV['PULL_REQUEST_ID'].to_i
+                end
+              end.pull_request? == true
+            end
+          end
+          test '#pull_request_id' do
+            assert do
+              EnvPullRequest.new do
+                if Utils.integral_string? ENV['PULL_REQUEST_ID']
+                  ENV['PULL_REQUEST_ID'].to_i
+                end
+              end.pull_request_id == pull_id
+            end
+          end
+        end
       end
 
       sub_test_case 'not pull request' do
