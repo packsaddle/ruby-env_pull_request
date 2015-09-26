@@ -1,5 +1,6 @@
 require_relative 'helper'
 
+# rubocop:disable Metrics/ClassLength
 module EnvPullRequest
   class TestCi < Test::Unit::TestCase
     extend TestHelper
@@ -13,14 +14,16 @@ module EnvPullRequest
     end
 
     sub_test_case 'not pull request' do
-      test '#pull_request?' do
-        assert do
-          EnvPullRequest.new.pull_request? == false
+      sub_test_case 'without block' do
+        test '#pull_request?' do
+          assert do
+            EnvPullRequest.new.pull_request? == false
+          end
         end
-      end
-      test '#pull_request_id' do
-        assert do
-          EnvPullRequest.new.pull_request_id.nil?
+        test '#pull_request_id' do
+          assert do
+            EnvPullRequest.new.pull_request_id.nil?
+          end
         end
       end
     end
@@ -36,14 +39,16 @@ module EnvPullRequest
           ENV.delete 'TRAVIS_PULL_REQUEST'
         end
 
-        test '#pull_request?' do
-          assert do
-            EnvPullRequest.new.pull_request? == true
+        sub_test_case 'without block' do
+          test '#pull_request?' do
+            assert do
+              EnvPullRequest.new.pull_request? == true
+            end
           end
-        end
-        test '#pull_request_id' do
-          assert do
-            EnvPullRequest.new.pull_request_id == pull_id
+          test '#pull_request_id' do
+            assert do
+              EnvPullRequest.new.pull_request_id == pull_id
+            end
           end
         end
       end
@@ -57,14 +62,16 @@ module EnvPullRequest
           ENV.delete 'TRAVIS_PULL_REQUEST'
         end
 
-        test '#pull_request?' do
-          assert do
-            EnvPullRequest.new.pull_request? == false
+        sub_test_case 'without block' do
+          test '#pull_request?' do
+            assert do
+              EnvPullRequest.new.pull_request? == false
+            end
           end
-        end
-        test '#pull_request_id' do
-          assert do
-            EnvPullRequest.new.pull_request_id.nil?
+          test '#pull_request_id' do
+            assert do
+              EnvPullRequest.new.pull_request_id.nil?
+            end
           end
         end
       end
@@ -80,14 +87,16 @@ module EnvPullRequest
         ENV.delete 'CIRCLE_PR_NUMBER'
       end
 
-      test '#pull_request?' do
-        assert do
-          EnvPullRequest.new.pull_request? == true
+      sub_test_case 'without block' do
+        test '#pull_request?' do
+          assert do
+            EnvPullRequest.new.pull_request? == true
+          end
         end
-      end
-      test '#pull_request_id' do
-        assert do
-          EnvPullRequest.new.pull_request_id == pull_id
+        test '#pull_request_id' do
+          assert do
+            EnvPullRequest.new.pull_request_id == pull_id
+          end
         end
       end
     end
@@ -102,14 +111,16 @@ module EnvPullRequest
         ENV.delete 'ghprbPullId'
       end
 
-      test '#pull_request?' do
-        assert do
-          EnvPullRequest.new.pull_request? == true
+      sub_test_case 'without block' do
+        test '#pull_request?' do
+          assert do
+            EnvPullRequest.new.pull_request? == true
+          end
         end
-      end
-      test '#pull_request_id' do
-        assert do
-          EnvPullRequest.new.pull_request_id == pull_id
+        test '#pull_request_id' do
+          assert do
+            EnvPullRequest.new.pull_request_id == pull_id
+          end
         end
       end
     end
