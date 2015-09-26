@@ -68,5 +68,27 @@ module EnvPullRequest
         end
       end
     end
+
+    sub_test_case 'Jenkins GitHub pull request builder plugin' do
+      pull_id = 800
+      setup do
+        ENV['ghprbPullId'] = pull_id.to_s
+      end
+
+      teardown do
+        ENV.delete 'ghprbPullId'
+      end
+
+      test '#pull_request?' do
+        assert do
+          EnvPullRequest.new.pull_request? == true
+        end
+      end
+      test '#pull_request_id' do
+        assert do
+          EnvPullRequest.new.pull_request_id == pull_id
+        end
+      end
+    end
   end
 end

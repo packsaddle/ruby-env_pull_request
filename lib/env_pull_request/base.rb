@@ -11,6 +11,8 @@ module EnvPullRequest
         ENV['TRAVIS_PULL_REQUEST'].to_i
       elsif ENV['CIRCLE_PR_NUMBER']
         ENV['CIRCLE_PR_NUMBER'].to_i
+      elsif ENV['ghprbPullId']
+        ENV['ghprbPullId'].to_i
       end
     end
 
