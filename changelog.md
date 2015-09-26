@@ -1,3 +1,13 @@
+<a name="0.2.2"></a>
+## [0.2.2](https://github.com/packsaddle/ruby-env_pull_request/compare/v0.2.1...v0.2.2) (2015-09-26)
+
+
+### Features
+
+* **jenkins:** add Jenkins GitHub pull request builder plugin ([9201531](https://github.com/packsaddle/ruby-env_pull_request/commit/9201531))
+
+
+
 <a name="0.2.1"></a>
 ## [0.2.1](https://github.com/packsaddle/ruby-env_pull_request/compare/v0.2.0...v0.2.1) (2015-09-26)
 
