@@ -25,6 +25,7 @@ module EnvPullRequest
       end
     end
 
+    # NOTE: add test ENV['TRAVIS_PULL_REQUEST'] = false
     sub_test_case 'travis-ci' do
       pull_id = 800
       setup do
