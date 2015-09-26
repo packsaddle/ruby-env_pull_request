@@ -2,16 +2,14 @@ require_relative 'helper'
 
 module EnvPullRequest
   class TestCi < Test::Unit::TestCase
+    extend TestHelper
+
     def self.startup
-      @original_travis_pull_request = ENV['TRAVIS_PULL_REQUEST']
-      @original_circle_pr_number = ENV['CIRCLE_PR_NUMBER']
-      ENV.delete 'TRAVIS_PULL_REQUEST'
-      ENV.delete 'CIRCLE_PR_NUMBER'
+      stash_env_pull_request
     end
 
     def self.shutdown
-      ENV['TRAVIS_PULL_REQUEST'] = @original_travis_pull_request
-      ENV['CIRCLE_PR_NUMBER'] = @original_circle_pr_number
+      restore_env_pull_request
     end
 
     sub_test_case 'not pull request' do
