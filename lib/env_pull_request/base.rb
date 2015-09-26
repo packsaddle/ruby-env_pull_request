@@ -13,11 +13,11 @@ module EnvPullRequest
     end
 
     def fetch_pull_request_id
-      if natural_number? ENV['TRAVIS_PULL_REQUEST']
+      if natural_number_string? ENV['TRAVIS_PULL_REQUEST']
         ENV['TRAVIS_PULL_REQUEST'].to_i
-      elsif natural_number? ENV['CIRCLE_PR_NUMBER']
+      elsif natural_number_string? ENV['CIRCLE_PR_NUMBER']
         ENV['CIRCLE_PR_NUMBER'].to_i
-      elsif natural_number? ENV['ghprbPullId']
+      elsif natural_number_string? ENV['ghprbPullId']
         ENV['ghprbPullId'].to_i
       end
     end
