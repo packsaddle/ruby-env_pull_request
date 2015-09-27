@@ -1,3 +1,9 @@
+<a name="0.3.2"></a>
+## [0.3.2](https://github.com/packsaddle/ruby-env_pull_request/compare/v0.3.1...v0.3.2) (2015-09-27)
+
+* Improve document.
+
+
 <a name="0.3.1"></a>
 ## [0.3.1](https://github.com/packsaddle/ruby-env_pull_request/compare/v0.3.0...v0.3.1) (2015-09-26)
 
