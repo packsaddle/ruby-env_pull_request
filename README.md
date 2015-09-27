@@ -1,6 +1,6 @@
 # EnvPullRequest
 
-[![Gem version][gem-image]][gem-url] [![Travis-CI Status][travis-image]][travis-url]
+[![Gem version][gem-image]][gem-url] [![Travis-CI Status][travis-image]][travis-url] [![yard docs][docs-image]][docs-url]
 
 > Get PULL_REQUEST_ID from environment variables.
 
@@ -34,7 +34,9 @@ env_pull.pull_request_id #=> 800
 
 ## API
 
-### EnvPullRequest.new(&block) -> EnvPullRequest
+### EnvPullRequest.new -> Base
+
+### EnvPullRequest.new(&block) -> Base
 
 #### block
 
@@ -45,14 +47,16 @@ Type: `block`
 User defined block for getting `pull request id`.
 
 
-### EnvPullRequest#pull_request_id -> nil | integer
+### Base#pull_request_id -> Integer | nil
 
-Pull request id.
+Return pull request id or nil.
 
 
-### EnvPullRequest#pull_request? -> boolean
+### Base#pull_request? -> boolean
 
-Detect pull request or not.
+Return true if this is pull request.
+
+And more *[details][docs-url]*.
 
 
 ## Supported services / applications
@@ -112,3 +116,5 @@ The gem is available as open source under the terms of the [MIT License](http://
 [travis-image]: https://img.shields.io/travis/packsaddle/ruby-env_pull_request/master.svg?style=flat-square&label=build%20%28linux%29
 [gem-url]: https://rubygems.org/gems/env_pull_request
 [gem-image]: http://img.shields.io/gem/v/env_pull_request.svg?style=flat-square
+[docs-url]: http://www.rubydoc.info/gems/env_pull_request
+[docs-image]: https://img.shields.io/badge/yard-docs-blue.svg?style=flat-square
