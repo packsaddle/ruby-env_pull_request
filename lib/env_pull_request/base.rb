@@ -19,7 +19,8 @@ module EnvPullRequest
     #   @example with user defined block
     #     env_pull =
     #       EnvPullRequest::Base.new do
-    #         if NaturalNumberString.positive_integer_string? ENV['PULL_REQUEST_ID']
+    #         if NaturalNumberString
+    #              .positive_integer_string? ENV['PULL_REQUEST_ID']
     #           ENV['PULL_REQUEST_ID'].to_i
     #         end
     #       end
