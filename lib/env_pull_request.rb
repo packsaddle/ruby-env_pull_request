@@ -11,7 +11,7 @@ module EnvPullRequest
   #   @example without user defined block
   #     env_pull = EnvPullRequest.new
   #
-  #   @return [Base]
+  #   @return [Base] Pull request information object
   #
   # @overload self.new(&block)
   #   @example with user defined block
@@ -23,7 +23,7 @@ module EnvPullRequest
   #       end
   #
   #   @yield user defined block
-  #   @return [Base]
+  #   @return [Base] Pull request information object
   def self.new(&block)
     Base.new(&block)
   end
