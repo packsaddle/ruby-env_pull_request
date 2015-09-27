@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in env_pull_request.gemspec
 gemspec
 
-group :development do
-  gem 'rubocop', group: :test
-  gem 'byebug', group: :test
-  gem 'parse_gemspec-cli'
-end
+gem 'rubocop'
+gem 'byebug'
+gem 'parse_gemspec-cli'
