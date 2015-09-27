@@ -1,5 +1,9 @@
 require_relative 'helper'
 
+# CAUTION: DO NOT ADD encrypted value!
+#          test/test_test_helper.rb asserts ENV.
+#          And this will show ENV accidentally in CI log.
+
 module EnvPullRequest
   class TestTestHelperInclude < Test::Unit::TestCase
     include ::EnvPullRequest::TestHelper
