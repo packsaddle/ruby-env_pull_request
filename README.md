@@ -34,7 +34,7 @@ env_pull.pull_request_id #=> 800
 
 ## API
 
-### EnvPullRequest.new(&block) -> EnvPullRequest
+### EnvPullRequest.new(&block) -> Base
 
 #### block
 
@@ -45,12 +45,12 @@ Type: `block`
 User defined block for getting `pull request id`.
 
 
-### EnvPullRequest#pull_request_id -> nil | integer
+### Base#pull_request_id -> nil | integer
 
 Pull request id.
 
 
-### EnvPullRequest#pull_request? -> boolean
+### Base#pull_request? -> boolean
 
 Detect pull request or not.
 
