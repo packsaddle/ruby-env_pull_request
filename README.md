@@ -15,8 +15,44 @@ env_pull.pull_request? #=> true
 env_pull.pull_request_id #=> 800
 ```
 
+### User defined block
+
+```ruby
+require 'env_pull_request'
+require 'natural_number_string'
+
+env_pull =
+  EnvPullRequest.new do
+    if NaturalNumberString.positive_integer_string? ENV['PULL_REQUEST_ID']
+      ENV['PULL_REQUEST_ID'].to_i
+    end
+  end
+env_pull.pull_request? #=> true
+env_pull.pull_request_id #=> 800
+```
+
 
 ## API
+
+### EnvPullRequest.new(&block) -> EnvPullRequest
+
+#### block
+
+*optional*
+
+Type: `block`
+
+User defined block for getting `pull request id`.
+
+
+### EnvPullRequest#pull_request_id -> nil | integer
+
+Pull request id.
+
+
+### EnvPullRequest#pull_request? -> boolean
+
+Detect pull request or not.
 
 
 ## Supported services / applications
