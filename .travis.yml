@@ -3,6 +3,7 @@
 #          And this will show ENV accidentally in CI log.
 language: "ruby"
 rvm:
+  - "1.9"
   - "2.0"
   - "2.1"
   - "2.2"
