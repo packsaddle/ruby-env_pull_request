@@ -7,8 +7,10 @@ module EnvPullRequest
       # And delete for testing.
       #
       # @example with test-unit
+      #   require 'env_pull_request/test_helper'
+      #
       #   class TestExample < Test::Unit::TestCase
-      #     extend TestHelper
+      #     extend ::EnvPullRequest::TestHelper
       #
       #     def self.startup
       #       stash_env_pull_request
@@ -29,8 +31,10 @@ module EnvPullRequest
       # Restore original environment variables for pull request.
       #
       # @example with test-unit
+      #   require 'env_pull_request/test_helper'
+      #
       #   class TestExample < Test::Unit::TestCase
-      #     extend TestHelper
+      #     extend ::EnvPullRequest::TestHelper
       #
       #     def self.shutdown
       #       restore_env_pull_request
