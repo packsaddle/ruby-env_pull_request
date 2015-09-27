@@ -6,3 +6,4 @@ gemspec
 gem 'rubocop'
 gem 'byebug'
 gem 'parse_gemspec-cli'
+gem 'yard'
