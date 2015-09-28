@@ -63,7 +63,7 @@ And more *[details][docs-url]*.
 
 * Travis-ci
     * `ENV['TRAVIS_PULL_REQUEST']`
-    * [Environment Variables - Travis CI](http://docs.travis-ci.com/user/environment-variables/#Convenience-Variables)
+    * [Environment Variables - Travis CI](http://docs.travis-ci.com/user/environment-variables/#Default-Environment-Variables)
 * CircleCI
     * `ENV['CIRCLE_PR_NUMBER']`
     * [Environment variables - CircleCI](https://circleci.com/docs/environment-variables#building-pull-requests-that-come-from-forks)
