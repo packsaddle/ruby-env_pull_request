@@ -19,7 +19,6 @@ module EnvPullRequest
       #
       # @return [void]
       def stash_env_pull_request
-        # NOTE: stash and restore only if exists
         @original_travis_pull_request = ENV['TRAVIS_PULL_REQUEST']
         @original_circle_pr_number = ENV['CIRCLE_PR_NUMBER']
         @original_ghprb_pull_id = ENV['ghprbPullId']
