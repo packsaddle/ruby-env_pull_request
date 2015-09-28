@@ -47,6 +47,9 @@ module EnvPullRequest
     #
     # @return [Integer, nil] pull request id or nil
     #
+    # @see TestHelper.stash_env_pull_request
+    # @see TestHelper.restore_env_pull_request
+    #
     # @see http://docs.travis-ci.com/user/environment-variables/#Default-Environment-Variables
     #   Environment Variables - Travis CI
     # @see https://circleci.com/docs/environment-variables#building-pull-requests-that-come-from-forks
