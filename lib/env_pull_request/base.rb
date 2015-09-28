@@ -45,14 +45,17 @@ module EnvPullRequest
     # Jenkins GitHub pull request builder plugin:
     #   ENV['ghprbPullId']
     #
+    # @return [Integer, nil] pull request id or nil
+    #
+    # @see TestHelper.stash_env_pull_request
+    # @see TestHelper.restore_env_pull_request
+    #
     # @see http://docs.travis-ci.com/user/environment-variables/#Default-Environment-Variables
     #   Environment Variables - Travis CI
     # @see https://circleci.com/docs/environment-variables#building-pull-requests-that-come-from-forks
     #   Environment variables - CircleCI
     # @see https://wiki.jenkins-ci.org/display/JENKINS/GitHub+pull+request+builder+plugin#GitHubpullrequestbuilderplugin-EnvironmentVariables
     #   GitHub pull request builder plugin - Jenkins - Jenkins Wiki
-    #
-    # @return [Integer, nil] pull request id or nil
     def fetch_pull_request_id
       if positive_integer_string? ENV['TRAVIS_PULL_REQUEST']
         ENV['TRAVIS_PULL_REQUEST'].to_i

@@ -18,6 +18,8 @@ module EnvPullRequest
       #   end
       #
       # @return [void]
+      #
+      # @see Base#fetch_pull_request_id
       def stash_env_pull_request
         @original_travis_pull_request = ENV['TRAVIS_PULL_REQUEST']
         @original_circle_pr_number = ENV['CIRCLE_PR_NUMBER']
@@ -41,6 +43,8 @@ module EnvPullRequest
       #   end
       #
       # @return [void]
+      #
+      # @see Base#fetch_pull_request_id
       def restore_env_pull_request
         ENV['TRAVIS_PULL_REQUEST'] = @original_travis_pull_request
         ENV['CIRCLE_PR_NUMBER'] = @original_circle_pr_number
