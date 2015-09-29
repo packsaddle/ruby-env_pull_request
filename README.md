@@ -106,6 +106,12 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 Bug reports and pull requests are welcome on GitHub at https://github.com/packsaddle/ruby-env_pull_request. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 
+## Thanks
+
+* [rosylilly](https://github.com/rosylilly)
+* [skorfmann](https://github.com/skorfmann)
+
+
 ## License
 
 © [sanemat](http://sane.jp)
