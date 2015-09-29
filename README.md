@@ -72,6 +72,11 @@ And more *[details][docs-url]*.
     * [GitHub pull request builder plugin - Jenkins - Jenkins Wiki](https://wiki.jenkins-ci.org/display/JENKINS/GitHub+pull+request+builder+plugin#GitHubpullrequestbuilderplugin-EnvironmentVariables)
 
 
+## Related
+
+* [env-branch](https://github.com/packsaddle/ruby-env_branch)
+
+
 ## Changelog
 
 [changelog.md](./changelog.md).
