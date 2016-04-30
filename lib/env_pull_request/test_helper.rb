@@ -46,6 +46,9 @@ module EnvPullRequest
       #
       # @see Base#fetch_pull_request_id
       def restore_env_pull_request
+        @original_travis_pull_request ||= nil
+        @original_circle_pr_number ||= nil
+        @original_ghprb_pull_id ||= nil
         ENV['TRAVIS_PULL_REQUEST'] = @original_travis_pull_request
         ENV['CIRCLE_PR_NUMBER'] = @original_circle_pr_number
         ENV['ghprbPullId'] = @original_ghprb_pull_id
