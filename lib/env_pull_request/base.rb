@@ -27,10 +27,10 @@ module EnvPullRequest
     #
     #   @yield user defined block
     #   @return [Base] pull request information object
-    def initialize(&block)
+    def initialize
       @pull_request_id =
         if block_given?
-          block.call || fetch_pull_request_id
+          yield || fetch_pull_request_id
         else
           fetch_pull_request_id
         end
