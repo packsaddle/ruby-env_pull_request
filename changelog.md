@@ -1,3 +1,9 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/packsaddle/ruby-env_pull_request/compare/v0.3.3...v1.0.0) (2016-04-30)
+
+* This library is already stable :)
+
+
 <a name="0.3.3"></a>
 ## [0.3.3](https://github.com/packsaddle/ruby-env_pull_request/compare/v0.3.2...v0.3.3) (2015-09-28)
 
