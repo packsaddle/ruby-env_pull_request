@@ -42,6 +42,8 @@ module EnvPullRequest
     #   ENV['TRAVIS_PULL_REQUEST']
     # circleci.com:
     #   ENV['CIRCLE_PR_NUMBER']
+    # bitrise.io:
+    #   ENV['BITRISE_PULL_REQUEST']
     # Jenkins GitHub pull request builder plugin:
     #   ENV['ghprbPullId']
     #
@@ -54,6 +56,8 @@ module EnvPullRequest
     #   Environment Variables - Travis CI
     # @see https://circleci.com/docs/environment-variables#building-pull-requests-that-come-from-forks
     #   Environment variables - CircleCI
+    # @see https://devcenter.bitrise.io/faq/available-environment-variables/
+    #   Environment variables - Bitrise
     # @see https://wiki.jenkins-ci.org/display/JENKINS/GitHub+pull+request+builder+plugin#GitHubpullrequestbuilderplugin-EnvironmentVariables
     #   GitHub pull request builder plugin - Jenkins - Jenkins Wiki
     def fetch_pull_request_id
@@ -61,6 +65,8 @@ module EnvPullRequest
         ENV['TRAVIS_PULL_REQUEST'].to_i
       elsif positive_integer_string? ENV['CIRCLE_PR_NUMBER']
         ENV['CIRCLE_PR_NUMBER'].to_i
+      elsif positive_integer_string? ENV['BITRISE_PULL_REQUEST']
+        ENV['BITRISE_PULL_REQUEST'].to_i
       elsif positive_integer_string? ENV['ghprbPullId']
         ENV['ghprbPullId'].to_i
       end
