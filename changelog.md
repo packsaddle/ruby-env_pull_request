@@ -1,3 +1,13 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/packsaddle/ruby-env_pull_request/compare/v1.0.0...v1.1.0) (2018-07-15)
+
+
+### Features
+
+* **ci:** support bitrise ([9a9e9d1](https://github.com/packsaddle/ruby-env_pull_request/commit/9a9e9d1))
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/packsaddle/ruby-env_pull_request/compare/v0.3.3...v1.0.0) (2016-04-30)
 
