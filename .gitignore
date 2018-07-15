@@ -10,3 +10,4 @@
 /example/.bundle/
 /example/vendor/bundle/
 /node_modules/
+package-lock.json
